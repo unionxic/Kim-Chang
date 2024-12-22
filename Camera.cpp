@@ -252,14 +252,14 @@ int main() {
 
     try {
         // Darknet 설정 파일 및 가중치 파일 경로
-        char *cfg = const_cast<char*>("/home/pi/Desktop/fuck/darknet/cfg/yolov4-tiny.cfg");
-        char *weight = const_cast<char*>("/home/pi/Desktop/fuck/darknet/yolov4-tiny.weights");
+        char *cfg = const_cast<char*>("/home/pi/Desktop/test/darknet/cfg/yolov4-tiny.cfg");
+        char *weight = const_cast<char*>("/home/pi/Desktop/test/darknet/yolov4-tiny.weights");
         network *net = load_network_custom(cfg, weight, 0, 1); // 네트워크 로드
         set_batch_network(net, 1); // 배치 사이즈 설정
 
         // 클래스 이름 로드
         std::vector<std::string> cls_names;
-        std::ifstream cls_file("/home/pi/Desktop/fuck/darknet/cfg/coco.names");
+        std::ifstream cls_file("/home/pi/Desktop/test/darknet/cfg/coco.names");
         std::string ln;
         while (std::getline(cls_file, ln)) cls_names.push_back(ln);
         std::vector<std::string> tgt_classes = {"person", "dog", "cat"}; // 탐지할 타겟 클래스
