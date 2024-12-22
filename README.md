@@ -62,7 +62,7 @@
      ```
    - 카메라 파이:
      ```bash
-     g++ -std=c++17 -O3 -Wall -Wextra -pthread -o test main_final.cpp GPIO.c -I./darknet/include -L./darknet -ldarknet $(pkg-config --cflags --libs opencv4) -lpthread
+     g++ -std=c++17 -O3 -Wall -Wextra -pthread -o test Camera.cpp GPIO.c -I./darknet/include -L./darknet -ldarknet $(pkg-config --cflags --libs opencv4) -lpthread
      ```
    - 메인 파이:
      ```bash
